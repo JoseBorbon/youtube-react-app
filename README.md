@@ -2,6 +2,6 @@
 [Miro-Board](https://miro.com/app/board/uXjVOdDmCPY=/)
 
 ## Authors
-- Ki-Sub Lee
+- Ki Sub Lee
 - Jose Borbon
 - Jalamang Janka
