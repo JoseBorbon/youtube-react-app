@@ -4,7 +4,7 @@ import '../css/About.css'
 export default class About extends Component {
   render() {
     return (
-      <div className = "TBD">
+      <main className = "TBD">
 
             <article>
                 <h2>Jose Bordon</h2>
@@ -21,7 +21,7 @@ export default class About extends Component {
                 <div></div>
             </article>
 
-      </div>
+      </main>
     );
   }
 }
