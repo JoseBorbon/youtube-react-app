@@ -1,0 +1,13 @@
+.Youtube-searches {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.Youtube-searches > * {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Youtube-video {
+  width: min-content;
+}

@@ -1,0 +1,24 @@
+nav {
+  background-color: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+
+nav > ul {
+  display: flex;
+  margin: 0.5em;
+  column-gap: 20px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+.Nav-youtube {
+  font-weight: bold;
+}
