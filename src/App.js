@@ -1,14 +1,13 @@
-import Footer from './components/Footer';
-import Routings from './components/Routings';
+import React, { Component } from 'react';
+import YoutubeApp from './components/YoutubeApp';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Routings />
-      <Footer />
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <YoutubeApp />
+      </div>
+    );
+  }
 }
-
-export default App;
