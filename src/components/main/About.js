@@ -9,14 +9,21 @@ import jalamang from "../../media/jj-profile2.jpg"
 export default class About extends Component {
   render() {
     return (
-      <main className = "TBD">
+      <main >
+          <article className ="project-description"> 
+            <h2>About our project</h2>
+            <p>This project was produced with functional components and react hooks. The purpose of it is to create a clone of youtube with a few additional features we decided to add in order to create a better user experience.</p>
+          </article>
+
+
           <h2> About our team  </h2>
           <div className ="about-background">
-              <img className = "about-jose-profile"src ={jose} alt ="jose's profile"/>
+          <a href = "https://github.com/JoseBorbon" target ="_blank" className = "about-jose-profile"><img src ={jose} alt ="jose's profile"/> </a>
               <article className = "about-jose-bio">
                 <h3>Jose Bourdon, Team Lead</h3>
                 <p> Former Facebook IT Employee who seeks new challenges. I am a Full Stack Software Engineer that specializes in the MERN stack. On the side I'm pursuing an IBM Full Stack Cloud Developer Certification and I'm a volunteer co-organizer for NYC Coders. My extracurricular activities include running marathons, traveling, watching anime, playing video games and building computers.</p>
               </article>
+              {/* <a href = "https://github.com/JoseBorbon" target ="_blank"><img src ={githubLogo} alt="github-logo"/> </a> */}
 
               <img className = "about-ki-sub-profile" src ={kisub} alt ="kisub's profile"/>
               <article  className = "about-ki-sub-bio">

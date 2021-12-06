@@ -11,16 +11,28 @@ main {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+
+.project-description p {
+   text-align: center;
+    font-size: 1.3vh;
+
+}
+
 img {
     width:170px;
     margin-left: 10px;
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .about-jose-profile {
     grid-column: 1fr;
     grid-row: 1;
 }
+.about-jose-profile img :hover{
+    transition: 0.5s;
+    background-color: yellow;
+}
+
 
 .about-jose-bio {
     grid-column: 1fr;
@@ -62,4 +74,9 @@ img {
 
 /* @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     
+} */
+
+/* a img {
+    width: 15px;
+    height: auto;
 } */
