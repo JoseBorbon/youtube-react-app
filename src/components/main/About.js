@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
 import '../main/About.css'
 import jose from "../../media/jose-profile.jpeg"
 import kisub from "../../media/Me.png"
 import jalamang from "../../media/jj-profile2.jpg"
 
-
-
-export default class About extends Component {
-  render() {
+const About = () => {
     return (
       <main >
           <article className ="project-description"> 
             <h2>About our project</h2>
             <p>This project was produced with functional components and react hooks. The purpose of it is to create a clone of youtube with a few additional features we decided to add in order to create a better user experience.</p>
           </article>
-
 
           <h2> About our team  </h2>
           <div className ="about-background">
@@ -39,8 +34,8 @@ export default class About extends Component {
                   <p>Self-motivated, results-driven, and passionate about technology, constantly learning and self-educating in today's ever-changing IT field in order to meet the demands of the employer. I completed a bachelor's degree in Computer Information Systems with fundamental knowledge in Java, Python, CSS, JavaScript, and SQL/Oracle Database.</p>
               </article>
             </div>
-
       </main>
     );
-  }
 }
+
+export default About;
