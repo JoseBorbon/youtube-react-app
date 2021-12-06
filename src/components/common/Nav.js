@@ -1,23 +1,41 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './Nav.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./Nav.css";
 
 export default class Nav extends Component {
   render() {
     return (
-      <nav>
-        <ul>
+      <div class="navbar">
+        <div class="container flex">
           <li>
-            <Link to="/">Youtube</Link>
+            <h1 class="logo-name">Youtube</h1>
           </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
+          <nav>
+            <ul>
+              <li className="search">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="search-box"
+                />
+                <button className="search-btn">
+                  <i className="fas fa-search"></i>
+                </button>
+              </li>
+              <li>
+                <Link to="/">
+                  <h3>Home</h3>
+                </Link>
+              </li>
+              <li>
+                <Link to="/about">
+                  <h3>About</h3>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     );
   }
 }
