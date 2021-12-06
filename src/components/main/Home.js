@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import Landing from './Landing';
-import Searches from './Searches';
+import Searches from './home-children/Searches';
+import Landing from './home-children/Landing';
+import './Home.css';
 
-export default class Home extends Component {
-  render() {
-    return this.props.searchResults.length === 0 ? (
-      <Landing />
-    ) : (
-      <Searches searchResults={this.props.searchResults} />
-    );
-  }
-}
+const Home = ({ searchResults, setVideoId }) => {
+  return searchResults.length === 0 ? (
+    <Landing />
+  ) : (
+    <Searches searchResults={searchResults} setVideoId={setVideoId} />
+  );
+};
+
+export default Home;
