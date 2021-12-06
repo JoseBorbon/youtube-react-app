@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;500;700&display=swap');
 /* bootstrap */
 :root {
   --black: #141115;
@@ -13,7 +13,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 
 ul {
   list-style: none;
