@@ -1,0 +1,65 @@
+
+main {
+    width: 390px;
+    height: 844px;
+    margin-top: 20px;
+}
+
+.about-background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+img {
+    width:170px;
+    margin-left: 10px;
+    margin-top: 5%;
+}
+
+.about-jose-profile {
+    grid-column: 1fr;
+    grid-row: 1;
+}
+
+.about-jose-bio {
+    grid-column: 1fr;
+    grid-row: 1;
+    /* background-color: rgb(192, 208, 166); */
+    font-size: 1.3vh;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.about-ki-sub-profile {
+    grid-column: 2/3;
+    grid-row: 2;
+}
+
+.about-ki-sub-bio {
+    grid-column: 1fr;
+    grid-row: 2;
+    font-size: 1.3vh;
+    text-align: left;
+    margin-left: 10px;
+    /* background-color: rgb(192, 208, 166); */
+}
+
+.about-jalamang-profile {
+    grid-column: 1fr;
+    grid-row: 3;
+}
+
+.about-jalamang-bio {
+    grid-column: 1fr;
+    grid-row: 3;
+    font-size: 1.3vh;
+    text-align: left;
+    margin-right: 10px;
+    /* background-color: rgb(76, 215, 108); */
+    margin-bottom: 10px;
+}
+
+/* @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    
+} */
