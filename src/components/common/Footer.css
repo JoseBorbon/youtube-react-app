@@ -3,8 +3,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0 20px;
-  position: fixed;
-  bottom: 0;
+  position: relative;
   width: 100%;
 }
 
