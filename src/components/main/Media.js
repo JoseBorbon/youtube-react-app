@@ -16,9 +16,3 @@ const Media = () => {
 };
 
 export default Media;
-
-/*  -- Media Component Layout -- 
-    Specific Video component that was selected
-    split by hr tag
-    Comments section thats a form down below it (Will Keep Track Of State and be a component)
-*/
