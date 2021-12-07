@@ -28,11 +28,10 @@ img {
     grid-column: 1fr;
     grid-row: 1;
 }
-.about-jose-profile img :hover{
-    transition: 0.5s;
+.about-jose-bio :hover{
+
     background-color: yellow;
 }
-
 
 .about-jose-bio {
     grid-column: 1fr;

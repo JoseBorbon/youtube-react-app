@@ -20,7 +20,7 @@ export default class About extends Component {
           <div className ="about-background">
           <a href = "https://github.com/JoseBorbon" target ="_blank" rel="noreferrer" className = "about-jose-profile"><img src ={jose} alt ="jose's profile"/> </a>
               <article className = "about-jose-bio">
-                <h3>Jose Bourdon, Team Lead</h3>
+                <h3>Jose Bordon, Team Lead</h3>
                 <p> Former Facebook IT Employee who seeks new challenges. I am a Full Stack Software Engineer that specializes in the MERN stack. On the side I'm pursuing an IBM Full Stack Cloud Developer Certification and I'm a volunteer co-organizer for NYC Coders. My extracurricular activities include running marathons, traveling, watching anime, playing video games and building computers.</p>
               </article>
               {/* <a href = "https://github.com/JoseBorbon" target ="_blank"><img src ={githubLogo} alt="github-logo"/> </a> */}
