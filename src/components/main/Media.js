@@ -1,11 +1,18 @@
-//Specific Video component that was selected
-//split by hr tag
-//Comments section thats a form down below it
+import { useParams } from 'react-router';
+import Video from './media-children/Video';
+import Comments from './media-children/Comments';
+import './Media.css';
 
-import React, { Component } from 'react';
+const Media = () => {
+  const ytVideoId = Object.values(useParams())[0];
 
-export default class Media extends Component {
-  render() {
-    return <div>Media Woot</div>;
-  }
-}
+  return (
+    <main>
+      <Video ytVideoId={ytVideoId} />
+      <hr />
+      <Comments />
+    </main>
+  );
+};
+
+export default Media;
