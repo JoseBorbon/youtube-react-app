@@ -1,5 +1,6 @@
 import YouTube from 'react-youtube';
 import React, { useState, useEffect } from 'react';
+import './Video.css';
 
 const Video = ({ ytVideoId, opts }) => {
   const [videoInfo, setVideoInfo] = useState([]);
