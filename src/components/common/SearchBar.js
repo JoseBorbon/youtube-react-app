@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router';
 import './SearchBar.css';
 
 const SearchBar = ({ getSearch, setSearchTerm }) => {
+  const navigate = useNavigate();
   const handleGetSearch = (e) => {
     e.preventDefault();
     getSearch();
+    navigate('/');
   };
 
   return (
