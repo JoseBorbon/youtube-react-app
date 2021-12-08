@@ -11,43 +11,43 @@ const Comments = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newComment = { name, comment };
-    //push comment into array of comments which is an array of objects with keys name and comment
     setComments([...comments, newComment]);
-    // reset name and comment states
     resetName('');
     resetComment('');
   };
 
   const sectionComments = comments.map(({ name, comment }) => (
-    <li key={uuid()}>
-      <div>
-        <p>{name}</p>
-        <p>{comment}</p>
-      </div>
+    <li className="Comments-comment" key={uuid()}>
+      <p className="Comments-name">{name}</p>
+      <p>{comment}</p>
     </li>
   ));
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="Comments-name">Name</label>
+      <form className="Comments-thread" onSubmit={handleSubmit}>
+        <label htmlFor="Comments-input-name">Name</label>
         <input
+          className="Comments-input"
           type="text"
-          id="Comments-name"
+          id="Comments-input-name"
           value={name}
           onChange={updateName}
+          placeholder="Name..."
         />
         <label htmlFor="Comments-comment">Comment</label>
         <input
+          className="Comments-input"
           type="text"
           id="Comments-comment"
           value={comment}
           onChange={updateComment}
+          placeholder="..."
         />
-        <input type="submit" />
+        <input className="Comments-submit-button" type="submit" />
       </form>
       <hr style={{ width: '80%' }} />
-      <ul>{sectionComments}</ul>
+      <ul className="Comments-list">{sectionComments}</ul>
     </div>
   );
 };

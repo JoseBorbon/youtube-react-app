@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nav {
   background-color: red;
   padding-top: 10px;
@@ -9,6 +10,8 @@ nav {
   font-weight: bold;
 }
 
+=======
+>>>>>>> main
 nav > ul {
   display: flex;
   margin: 0.5em;

@@ -1,0 +1,33 @@
+label {
+  display: block;
+  text-align: left;
+}
+
+.Comments-thread {
+  display: grid;
+  row-gap: 1vh;
+  margin-left: 25vh;
+}
+
+.Comments-submit-button {
+  width: 10vh;
+}
+
+.Comments-input {
+  width: 80vh;
+  height: 3vh;
+}
+
+.Comments-list {
+  margin-left: 25vh;
+  padding-left: 0;
+  width: 80vh;
+  list-style-type: none;
+  text-align: left;
+  overflow-y: auto !important;
+}
+
+.Comments-name {
+  font-size: x-large;
+  margin: 0;
+}

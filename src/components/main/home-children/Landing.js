@@ -1,7 +1,11 @@
 import './Landing.css';
 
 const Landing = () => {
-  return <main>No Searches</main>;
+  return (
+    <main>
+      <p>No Searches</p>
+    </main>
+  );
 };
 
 export default Landing;

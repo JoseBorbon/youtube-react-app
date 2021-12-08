@@ -7,7 +7,7 @@ const Media = () => {
   const ytVideoId = Object.values(useParams())[0];
 
   return (
-    <main>
+    <main className="Media-section">
       <Video ytVideoId={ytVideoId} />
       <hr />
       <Comments />

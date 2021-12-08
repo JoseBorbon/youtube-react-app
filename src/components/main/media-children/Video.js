@@ -20,14 +20,9 @@ const Video = ({ ytVideoId, opts }) => {
   };
 
   return (
-    <div>
+    <div className="Youtube-video">
       <h3>{videoInfo.title}</h3>
-      <YouTube
-        containerClassName="Youtube-video"
-        videoId={ytVideoId}
-        opts={opts}
-        onReady={onReady}
-      />
+      <YouTube videoId={ytVideoId} opts={opts} onReady={onReady} />
       <h4>{videoInfo.channelTitle}</h4>
     </div>
   );

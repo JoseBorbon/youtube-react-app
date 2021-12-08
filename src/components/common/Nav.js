@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import SearchBar from './nav-children/SearchBar';
 import './Nav.css';
 import SearchBar from './SearchBar';
 
-const Nav = () => {
+const Nav = ({ getSearch, searchTerm, setSearchTerm }) => {
   return (
     <nav>
       <ul>
@@ -16,6 +17,11 @@ const Nav = () => {
         <li>
           <Link to="/about">About</Link>
         </li>
+        <SearchBar
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          getSearch={getSearch}
+        />
       </ul>
     </nav>
   );
