@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import createMarkup from '../../../utilities/createMarkup';
 import './Searches.css';
 
 const Searches = ({ searchResults }) => {
@@ -11,7 +12,7 @@ const Searches = ({ searchResults }) => {
           className="Youtube-thumbnail"
         >
           <img src={thumbnail} alt={title} />
-          <h4>{title}</h4>
+          <h4 dangerouslySetInnerHTML={createMarkup(title)} />
         </Link>
       );
     }
