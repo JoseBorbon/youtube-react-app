@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Nav from './common/Nav';
 import Routings from './Routings';
 import Footer from './common/Footer';
+import MobileNavigation from './MobileNavigation';
 
 const YoutubeApp = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -39,11 +40,13 @@ const YoutubeApp = () => {
 
   return (
     <>
+   
       <Nav
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         getSearch={getSearch}
       />
+      <MobileNavigation/>
       <Routings searchResults={searchResults} />
       <Footer />
     </>
