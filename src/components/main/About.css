@@ -28,7 +28,7 @@ img {
     grid-column: 1fr;
     grid-row: 1;
 }
-.about-jose-bio :hover{
+.about-jose-bio:hover{
 
     background-color: yellow;
 }

@@ -36,7 +36,7 @@ export default class About extends Component {
               <img className src ={jalamang} alt ="jalamang's profile"/> </a>
               <article className = "about-jalamang-bio">
                 <h3>Jalamang Janka</h3>
-                  Self-motivated, results-driven, and passionate about technology, constantly learning and self-educating in today's ever-changing IT field in order to meet the demands of the employer. I completed a bachelor's degree in Computer Information Systems with fundamental knowledge in Java, Python, CSS, JavaScript, and SQL/Oracle Database.
+                  <p>Self-motivated, results-driven, and passionate about technology, constantly learning and self-educating in today's ever-changing IT field in order to meet the demands of the employer. I completed a bachelor's degree in Computer Information Systems with fundamental knowledge in Java, Python, CSS, JavaScript, and SQL/Oracle Database.</p>
               </article>
             </div>
 
