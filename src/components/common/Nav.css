@@ -5,6 +5,10 @@ nav {
   padding-left: 0px;
 }
 
+.Nav-youtube {
+  font-weight: bold;
+}
+
 nav > ul {
   display: flex;
   margin: 0.5em;
@@ -19,6 +23,8 @@ a {
   font-size: large;
 }
 
-.Nav-youtube {
-  font-weight: bold;
+
+.search-bar {
+  margin-left: 25% !important;
+  margin-right: 25% !important;
 }

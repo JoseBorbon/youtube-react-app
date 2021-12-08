@@ -40,8 +40,7 @@ const YoutubeApp = () => {
 
   return (
     <div>
-      <Nav />
-      <SearchBar setSearchTerm={setSearchTerm} getSearch={getSearch} />
+      <Nav setSearchTerm={setSearchTerm} getSearch={getSearch} />
       <Routings searchResults={searchResults} />
       <Footer />
     </div>
