@@ -1,10 +1,3 @@
-nav {
-  background-color: red;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0px;
-}
-
 nav > ul {
   display: flex;
   margin: 0.5em;
