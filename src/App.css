@@ -1,3 +1,33 @@
 .App {
   text-align: center;
+  height: 100vh;
+  margin-right: 0px;
+}
+
+nav {
+  background-color: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  height: 4vh;
+  position: fixed;
+  top: 0vh;
+  width: 100%;
+  left: 0;
+}
+
+main {
+  height: 90vh;
+  overflow: scroll;
+  position: fixed;
+  top: 5vh;
+  width: 100%;
+  left: 0;
+}
+
+footer {
+  height: 2vh;
+  position: fixed;
+  top: 95vh;
+  left: 0;
 }
