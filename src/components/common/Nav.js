@@ -9,6 +9,7 @@ const Nav = ({
   setSearchTerm,
   isColorSwitchToggled,
   setIsColorSwitchToggled,
+  setCurrBGColor,
 }) => {
   return (
     <nav>
@@ -33,6 +34,7 @@ const Nav = ({
           <ColorSwitch
             isColorSwitchToggled={isColorSwitchToggled}
             handleSetIsColorSwitchToggled={setIsColorSwitchToggled}
+            setCurrBGColor={setCurrBGColor}
           />
         </li>
       </ul>
