@@ -6,6 +6,8 @@ import Footer from './common/Footer';
 const YoutubeApp = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [currBGColor, setCurrBGColor] = useState('white');
+  const [isColorSwitchToggled, setIsColorSwitchToggled] = useState(false);
 
   const getSearch = () => {
     if (!searchTerm) return;
@@ -43,8 +45,10 @@ const YoutubeApp = () => {
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         getSearch={getSearch}
+        isColorSwitchToggled={isColorSwitchToggled}
+        setIsColorSwitchToggled={setIsColorSwitchToggled}
       />
-      <Routings searchResults={searchResults} />
+      <Routings searchResults={searchResults} currBGColor={currBGColor} />
       <Footer />
     </>
   );
