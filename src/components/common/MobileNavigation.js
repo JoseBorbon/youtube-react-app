@@ -1,14 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./common/MobileNavigation.css";
-import { SlideBarData } from "./common/NavBarLink";
+import "./MobileNavigation.css";
+import { SlideBarData} from "./NavBarLink"
 
 export default function MobileNavigation() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
+
   return (
       <>
     <nav className="MobileNavigation">
@@ -26,19 +27,18 @@ export default function MobileNavigation() {
       </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
       <ul onClick={showSidebar}> 
-          {SlideBarData.map((item, i) => {
-            return (
-              <>
-                <li key={item + i} className={item.cName}>
-                  <Link to={item.path}>
-                    {" "}
-                    {item.icon} <span>{item.title}</span>
-                  </Link>
-                </li>
-              </>
-            );
-          })}
-         
+         {SlideBarData.map((item, i) => {   
+    return (
+      <>
+        <li key={item + i} className={item.cName}>
+          <Link to={item.path}>
+            {" "}
+            {item.icon} <span>{item.title}</span>
+          </Link>
+        </li>
+      </>
+    );
+  })}
         </ul>
     </nav>
     </nav>

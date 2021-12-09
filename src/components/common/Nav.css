@@ -1,37 +1,19 @@
-.NavBar {
-  background-color: red;
-  border:2px solid brown;
-}
-
-
-.NavBar nav ul li {
-  display: inline-block;
-  margin: 0 1.5vw;
-}
-
-.NavBar ul li a {
-  text-decoration: none;
-  color: white;
+.Nav-youtube ul li a {
   display: flex;
-  align-items: center;
 }
-.MobileNavigation{
+
+.MobileNavigation {
   display: none;
 }
 
-
-
-.youtube{
-display: flex; 
+.youtube {
+  display: flex;
 }
 
-.youtube li{
-  padding: 0 0 25px 25px;
-  list-style-type: none; 
+.youtube li {
+  padding: 0 25px 0  25px;
+  list-style-type: none;
 }
-
-
-
 
 nav > ul {
   display: flex;

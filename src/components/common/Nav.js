@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import MobileNavigation from './MobileNavigation';
 import SearchBar from './nav-children/SearchBar';
 import './Nav.css';
 import {SlideBarData} from "./NavBarLink"
@@ -6,10 +7,9 @@ import {SlideBarData} from "./NavBarLink"
 const Nav = ({ getSearch, searchTerm, setSearchTerm }) => {
   return (
     <nav>
+      
       <ul>
-    
-        <li className="Nav-youtube">
-
+        <li className="Nav-youtube flex">
         <ul className = "youtube">
           {SlideBarData.map((item, i) => {
           
@@ -25,15 +25,6 @@ const Nav = ({ getSearch, searchTerm, setSearchTerm }) => {
             );
           })}
         </ul>
-
-
-          {/* <Link to="/">Youtube</Link>
-        </li>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>*/}
         </li> 
         <SearchBar
           searchTerm={searchTerm}

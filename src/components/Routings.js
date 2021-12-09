@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './main/Home';
 import About from './main/About';
 import Media from './main/Media';
+import "./common/Responsive.css"
 
 const Routings = ({ searchResults }) => {
   return (
