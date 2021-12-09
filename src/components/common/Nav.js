@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom';
 import SearchBar from './nav-children/SearchBar';
+import ColorSwitch from './nav-children/ColorSwitch';
 import './Nav.css';
 
-const Nav = ({ getSearch, searchTerm, setSearchTerm }) => {
+const Nav = ({
+  getSearch,
+  searchTerm,
+  setSearchTerm,
+  isColorSwitchToggled,
+  setIsColorSwitchToggled,
+}) => {
   return (
     <nav>
       <ul>
@@ -15,11 +22,19 @@ const Nav = ({ getSearch, searchTerm, setSearchTerm }) => {
         <li>
           <Link to="/about">About</Link>
         </li>
-        <SearchBar
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          getSearch={getSearch}
-        />
+        <li>
+          <SearchBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            getSearch={getSearch}
+          />
+        </li>
+        <li>
+          <ColorSwitch
+            isColorSwitchToggled={isColorSwitchToggled}
+            handleSetIsColorSwitchToggled={setIsColorSwitchToggled}
+          />
+        </li>
       </ul>
     </nav>
   );
