@@ -3,9 +3,9 @@ import jose from '../../media/jose-profile.jpeg';
 import kisub from '../../media/Me.png';
 import jalamang from '../../media/jj-profile2.jpg';
 
-const About = () => {
+const About = ({ currBGColor }) => {
   return (
-    <main>
+    <main style={{ backgroundColor: currBGColor }}>
       <article className="project-description">
         <h2>About our project</h2>
         <p>
