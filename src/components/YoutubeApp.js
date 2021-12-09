@@ -47,6 +47,7 @@ const YoutubeApp = () => {
         getSearch={getSearch}
         isColorSwitchToggled={isColorSwitchToggled}
         setIsColorSwitchToggled={setIsColorSwitchToggled}
+        setCurrBGColor={setCurrBGColor}
       />
       <Routings searchResults={searchResults} currBGColor={currBGColor} />
       <Footer />
