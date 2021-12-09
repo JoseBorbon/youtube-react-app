@@ -1,0 +1,19 @@
+ .NavBar {
+    background-color: red;
+}
+
+
+.NavBar nav ul li {
+    display: inline-block;
+    margin: 0 1.5vw;
+}
+
+.NavBar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+/* .MobileNavigation{
+    display: none;
+} */

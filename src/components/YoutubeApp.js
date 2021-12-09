@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
-import Nav from './common/Nav';
-import SearchBar from './common/SearchBar';
-import Routings from './Routings';
-import Footer from './common/Footer';
+import React, { useState } from "react";
+// import Nav from "./common/Nav";
+import SearchBar from "./common/SearchBar";
+import Routings from "./Routings";
+import Footer from "./common/Footer";
+import Navigation from "./common/Navigation";
+import MobileNavigation from "./common/MobileNavigation";
 
 const YoutubeApp = () => {
   const [searchResults, setSearchResults] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const getSearch = () => {
     if (!searchTerm) return;
     const query = searchTerm
-      .split('')
-      .map((char) => (char !== ' ' ? char : '%20'))
-      .join('');
+      .split("")
+      .map((char) => (char !== " " ? char : "%20"))
+      .join("");
 
     (async () => {
       const response = await fetch(
@@ -40,8 +42,10 @@ const YoutubeApp = () => {
 
   return (
     <div>
-      <Nav />
-      <SearchBar setSearchTerm={setSearchTerm} getSearch={getSearch} />
+      {/* <Nav /> */}
+      <Navigation />
+<MobileNavigation/>
+      {/* <SearchBar setSearchTerm={setSearchTerm} getSearch={getSearch} /> */}
       <Routings searchResults={searchResults} />
       <Footer />
     </div>

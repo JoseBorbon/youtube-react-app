@@ -1,34 +1,26 @@
-import { Link } from "react-router-dom";
-import "./Nav.css";
+// import { Link } from 'react-router-dom';
+import './Nav.css';
+import SearchBar from './SearchBar';
 
 const Nav = () => {
   return (
-    <div class="navbar">
-      <div class="container flex">
+    <div>
+
+
+<SearchBar placeholder="Search..." id="search-bar" 
+// data={data}
+/>
+      {/* <ul>
+        <li className="Nav-youtube">
+          <Link to="/">Youtube</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
         <li>
           <h1 class="logo-name">Youtube</h1>
         </li>
-        <nav>
-          <ul>
-            <li className="search">
-              <input type="text" placeholder="Search" className="search-box" />
-              <button className="search-btn">
-                <i className="fas fa-search"></i>
-              </button>
-            </li>
-            <li>
-              <Link to="/">
-                <h3>Home</h3>
-              </Link>
-            </li>
-            <li>
-              <Link to="/about">
-                <h3>About</h3>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      </ul> */}
     </div>
   );
 };
