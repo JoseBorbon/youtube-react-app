@@ -1,8 +1,8 @@
 import './Landing.css';
 
-const Landing = () => {
+const Landing = ({ currBGColor }) => {
   return (
-    <main>
+    <main style={{ backgroundColor: currBGColor }}>
       <p>No Searches</p>
     </main>
   );
