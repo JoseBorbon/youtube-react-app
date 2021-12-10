@@ -1,28 +1,25 @@
 import { Link } from 'react-router-dom';
 import SearchBar from './nav-children/SearchBar';
 import './Nav.css';
-import SearchBar from './SearchBar';
+import youtubeLogo from '../../media/youtube-logo.png.svg';
+import homeLogo from '../../media/home-logo.png';
 
 const Nav = ({ getSearch, searchTerm, setSearchTerm }) => {
   return (
     <nav>
-      <ul>
-        <li className="Nav-youtube">
-          <Link to="/">Youtube</Link>
-        </li>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <SearchBar className ="search-bar" />
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <SearchBar
+        <div className="nav-youtube">
+          <Link to="/"><img src ={youtubeLogo} className="youtube-logo alt="youtube-logo/></Link>
+        </div>
+        <div className="nav-home">
+          <Link to="/"><img src ={homeLogo} className="home-logo"/></Link>
+        </div>
+        <div className = "search-bar">
+        <SearchBar 
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
           getSearch={getSearch}
         />
-      </ul>
+        </div>
     </nav>
   );
 };

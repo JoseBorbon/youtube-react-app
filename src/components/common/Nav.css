@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-nav {
-  background-color: red;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0px;
-}
-
-.Nav-youtube {
-  font-weight: bold;
-}
-
-=======
->>>>>>> main
-nav > ul {
-  display: flex;
-  margin: 0.5em;
-  column-gap: 20px;
-  list-style: none;
-  padding-left: 20px;
-}
 
 a {
   color: white;
@@ -27,7 +6,29 @@ a {
 }
 
 
+.nav-youtube {
+  grid-column: 1;
+}
+
+.youtube-logo{
+  width: 90px;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 50px;
+  margin-top: 5px ;
+}
+
+.nav-home {
+  grid-column: 2;
+  margin-top: 5px;
+}
+
+.home-logo {
+  width: 30px;
+  height: auto;
+}
+
 .search-bar {
-  margin-left: 25% !important;
-  margin-right: 25% !important;
+ grid-column: 5;
+ width: 800px;
 }

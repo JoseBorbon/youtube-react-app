@@ -21,11 +21,11 @@ const Searches = ({ searchResults }) => {
   return <main className="Youtube-searches">{thumbnails}</main>;
 };
 
-Searches.defaultProps = {
-  opts: {
-    height: '220',
-    width: '200',
-  },
-};
+// Searches.defaultProps = {
+//   opts: {
+//     height: '400',
+//     width: 'auto',
+//   },
+// };
 
 export default Searches;

@@ -1,33 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-  height: 100vh;
-  margin-right: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 7vh 86vh 7vh;
 }
 
 nav {
-  background-color: red;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 0px;
-  height: 4vh;
-  position: fixed;
-  top: 0vh;
-  width: 100%;
-  left: 0;
+  background-color: #cf4848;
+  grid-column: span 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: fixed; 
+  height: 50px;
 }
 
 main {
-  height: 90vh;
+  background-color: #f2e6e6;
+  grid-column: span 2;
+  grid-row: 2;
   overflow: scroll;
-  position: fixed;
-  top: 5vh;
-  width: 100%;
-  left: 0;
 }
 
 footer {
-  height: 2vh;
-  position: fixed;
-  top: 95vh;
-  left: 0;
+  grid-row: 3;
+  grid-column: span 2;
+  background-color: #cf4848;
+  color: white;
+  text-align: center;
 }

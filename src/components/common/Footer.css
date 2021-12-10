@@ -1,12 +1,11 @@
-footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 20px 0 20px;
-  position: relative;
-  width: 100%;
-}
+.footer-container{
+    margin-top: 15px;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
 
-footer p {
-  margin: 0;
+}
+li {
+    list-style: none;
 }
