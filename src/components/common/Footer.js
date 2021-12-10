@@ -1,9 +1,10 @@
+import Contact from './footer-children/Contact';
 import './Footer.css';
 
 const Footer = () => {
   return (
     <footer>
-      <p>Youtube 2022</p>
+      <Contact/>
     </footer>
   );
 };

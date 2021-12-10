@@ -8,6 +8,7 @@ export default function MobileNavigation() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => {
     setSidebar(!sidebar);
+   
   };
 
   return (

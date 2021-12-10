@@ -1,13 +1,13 @@
-import { useNavigate } from 'react-router';
-import './SearchBar.css';
+import { useNavigate } from "react-router";
+import "./SearchBar.css";
 
 const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
   const navigate = useNavigate();
   const handleGetSearch = (e) => {
     e.preventDefault();
     getSearch();
-    setSearchTerm('');
-    navigate('/');
+    setSearchTerm("");
+    navigate("/");
   };
 
   return (
@@ -18,8 +18,11 @@ const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         value={searchTerm}
       />
-      <input type="submit" value="Search" />
+      <button type="submit" className="search">
+        <i className="fas fa-search"> </i>
+      </button>
     </form>
+    
   );
 };
 
