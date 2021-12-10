@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import './SearchBar.css';
+import searchIcon from '../../../media/search.png'
 
 const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
   const navigate = useNavigate();
@@ -13,12 +14,13 @@ const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
   return (
     <form onSubmit={(e) => handleGetSearch(e)}>
       <input
+        className ="input-area"
         type="text"
         placeholder="Enter Search Here..."
         onChange={(e) => setSearchTerm(e.target.value)}
         value={searchTerm}
       />
-      <input type="submit" value="Search" />
+      <button className="search-icon" type="submit"><img src={searchIcon} className="search-icon-size"  /></button>
     </form>
   );
 };

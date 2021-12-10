@@ -1,3 +1,38 @@
 form {
   border-radius: 1em;
+  align-items: center;
+}
+
+.input-area {
+  width: 500px;
+  height: auto;
+  padding: 7px;
+  background-color: #8f3131;
+  border: none;
+  color: white;
+  font-size: larger;
+  outline-style: none;
+}
+
+.input-area:hover {
+  background-color: #5e2d2d;
+}
+
+::placeholder {
+  color: rgb(228, 188, 188);
+  font-size:medium;
+}
+
+.search-icon {
+  margin-top: 6px;
+  padding: 7px;
+  background-color: #ad4747;
+  border: none;
+  font-size: larger;
+  color: rgb(228, 188, 188);
+}
+.search-icon-size {
+  width: auto;
+  height: 15px;
+  padding: 0 10px;
 }

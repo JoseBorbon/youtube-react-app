@@ -23,11 +23,11 @@ const Searches = ({ searchResults, currBGColor }) => {
   );
 };
 
-Searches.defaultProps = {
-  opts: {
-    height: '220',
-    width: '200',
-  },
-};
+// Searches.defaultProps = {
+//   opts: {
+//     height: '400',
+//     width: 'auto',
+//   },
+// };
 
 export default Searches;

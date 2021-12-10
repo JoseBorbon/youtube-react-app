@@ -1,15 +1,28 @@
 .Youtube-searches {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .Youtube-searches > * {
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: 50%;
+  margin-left: auto; */
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .Youtube-thumbnail {
-  color: black;
+  color: rgb(0, 0, 0);
+  width: 180px;
+  grid-column: 1fr;
+}
+
+.Youtube-thumbnail img {
+  width: 320px;
+  height: auto;
+}
+h4 {
+  font-size: large;
+  margin-left: 10px;
 }
 
 .Youtube-thumbnail:hover {

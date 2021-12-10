@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import SearchBar from './nav-children/SearchBar';
 import ColorSwitch from './nav-children/ColorSwitch';
 import './Nav.css';
+import youtubeLogo from '../../media/youtube-logo.png.svg';
+import homeLogo from '../../media/home-logo.png';
 
 const Nav = ({
   getSearch,
@@ -13,31 +15,26 @@ const Nav = ({
 }) => {
   return (
     <nav>
-      <ul>
-        <li className="Nav-youtube">
-          <Link to="/">Youtube</Link>
-        </li>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <SearchBar
-            searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
-            getSearch={getSearch}
-          />
-        </li>
-        <li>
-          <ColorSwitch
+        <div className="nav-youtube">
+          <Link to="/"><img src ={youtubeLogo} className="youtube-logo alt="youtube-logo/></Link>
+        </div>
+        <div className="nav-home">
+          <Link to="/"><img src ={homeLogo} className="home-logo"/></Link>
+        </div>
+        <div className = "search-bar">
+        <SearchBar 
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          getSearch={getSearch}
+        />
+        </div>
+        <div className ="color-switch" >
+          <ColorSwitch 
             isColorSwitchToggled={isColorSwitchToggled}
             handleSetIsColorSwitchToggled={setIsColorSwitchToggled}
             setCurrBGColor={setCurrBGColor}
           />
-        </li>
-      </ul>
+          </div>
     </nav>
   );
 };
