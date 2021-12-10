@@ -13,7 +13,7 @@ const About = ({ currBGColor }) => {
   return (
     <main style={{ backgroundColor: currBGColor }}>
         <div className="about-container">
-        <img className="project-pic"src={projectPic}/>
+        <img className="project-pic"src={projectPic} alt='project-pic'/>
       <article className="project-description">
         <h1>About our project</h1>
         <p>
@@ -25,7 +25,7 @@ const About = ({ currBGColor }) => {
         </p>
       </article>
 
-      <img className="team-pic"src={teamPic}/>
+      <img className="team-pic"src={teamPic} alt='team-pic'/>
       <article className="team-description">
         <h1>Who we are</h1>
         <p>
@@ -44,7 +44,7 @@ const About = ({ currBGColor }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={jose} alt="jose's profile" />
+          <img src={jose} alt="jose's profile"/>
           <h4>Jose Borbon, Team Lead</h4>
           <p>Cloud Master at IBM</p>
           <a 
@@ -52,25 +52,25 @@ const About = ({ currBGColor }) => {
             target="_blank"
             rel="noreferrer"
             >
-               <img src ={linkedInLogo} className="logos"/> 
+               <img src ={linkedInLogo} className="logos" alt='linkedIn-logo'/> 
           </a>
           <a 
             href='https://twitter.com/JoinPursuit'
             target="_blank"
             rel="noreferrer">
-               <img src ={twitterLogo} className="logos-resize"/>
+               <img src ={twitterLogo} className="logos-resize" alt='twitter-logo'/>
           </a>
 
           <a 
             href='https://github.com/JoseBorbon'
             target="_blank"
             rel="noreferrer">
-               <img src ={githubLogo} className="logos-resize" />
+               <img src ={githubLogo} className="logos-resize"alt='github-logo' />
           </a>
         </a>
         <div className='jose-learn-about-page'>
           <p>Learn More About Jose</p>
-          <img className="arrow-icon" src={arrowIcon}/>
+          <img className="arrow-icon" src={arrowIcon} alt='arrow-icon'/>
         </div>
         </div>
         {/* <article className="about-jose-bio">
@@ -90,31 +90,31 @@ const About = ({ currBGColor }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={kisub} alt="kisub's profile" />
+          <img src={kisub} alt="kisub's profile"/>
           <h4>Ki Sub Lee, Good employee</h4>
           <p>Full-Stack Web Developer at Twitter</p>
           <a 
             href="https://www.linkedin.com/in/ki-sub-can-do-it/"
             target="_blank"
             rel="noreferrer">
-               <img src ={linkedInLogo} className="logos"/> </a>
+               <img src ={linkedInLogo} className="logos" alt='linkedIn-logo'/> </a>
           <a 
             href='https://twitter.com/JoinPursuit'
             target="_blank"
             rel="noreferrer">
-               <img src ={twitterLogo} className="logos-resize"/>
+               <img src ={twitterLogo} className="logos-resize" alt='twitter-logo'/>
           </a>
 
           <a 
             href='https://github.com/kisublee'
             target="_blank"
             rel="noreferrer">
-               <img src ={githubLogo} className="logos-resize" />
+               <img src ={githubLogo} className="logos-resize" alt='github-logo' />
           </a>
         </a>
         <div className='kisub-learn-about-page'>
           <p>Learn More About Ki Sub</p>
-          <img className="arrow-icon" src={arrowIcon}/>
+          <img className="arrow-icon" src={arrowIcon} alt='arrow-icon'/>
         </div>
           </div>
         {/* <article className="about-ki-sub-bio">
@@ -134,7 +134,7 @@ const About = ({ currBGColor }) => {
           rel="noreferrer"
        
         >
-          <img  src={jalamang} alt="jalamang's profile" />
+          <img  src={jalamang} alt="jalamang's profile"/>
           <h4>Jalamang Janka, Good employee</h4>
           <p>Full-Stack Web Developer at Amazon</p>
 
@@ -142,24 +142,24 @@ const About = ({ currBGColor }) => {
             href="https://www.linkedin.com/in/jalamang/"
             target="_blank"
             rel="noreferrer">
-               <img src ={linkedInLogo} className="logos"/> </a>
+               <img src ={linkedInLogo} className="logos" alt='linkedIn-logo'/> </a>
           <a 
             href='https://twitter.com/jalaminy'
             target="_blank"
             rel="noreferrer">
-               <img src ={twitterLogo} className="logos-resize"/>
+               <img src ={twitterLogo} className="logos-resize" alt='twitter-logo'/>
           </a>
 
           <a 
             href='https://github.com/Jalamang'
             target="_blank"
             rel="noreferrer">
-               <img src ={githubLogo} className="logos-resize" />
+               <img src ={githubLogo} className="logos-resize" alt='github-logo'/>
           </a>
         </a>
         <div className='jalamang-learn-about-page'>
           <p>Learn More About Jalamang</p>
-          <img className="arrow-icon" src={arrowIcon}/>
+          <img className="arrow-icon" src={arrowIcon} alt='arrow-icon'/>
         </div>
         </div>
         {/* <article className="about-jalamang-bio">

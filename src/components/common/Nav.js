@@ -16,10 +16,10 @@ const Nav = ({
   return (
     <nav>
         <div className="nav-youtube">
-          <Link to="/"><img src ={youtubeLogo} className="youtube-logo alt="youtube-logo/></Link>
+          <Link to="/"><img src ={youtubeLogo} className="youtube-logo" alt="youtube-logo"/></Link>
         </div>
         <div className="nav-home">
-          <Link to="/"><img src ={homeLogo} className="home-logo"/></Link>
+          <Link to="/"><img src ={homeLogo} className="home-logo" alt='home-logo'/></Link>
         </div>
         <div className = "search-bar">
         <SearchBar 
