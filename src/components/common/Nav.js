@@ -28,6 +28,13 @@ const Nav = ({
           getSearch={getSearch}
         />
         </div>
+        <div className ="color-switch" >
+          <ColorSwitch 
+            isColorSwitchToggled={isColorSwitchToggled}
+            handleSetIsColorSwitchToggled={setIsColorSwitchToggled}
+            setCurrBGColor={setCurrBGColor}
+          />
+          </div>
     </nav>
   );
 };

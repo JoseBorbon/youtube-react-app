@@ -32,3 +32,8 @@ a {
  grid-column: 5;
  width: 800px;
 }
+
+.color-switch {
+  grid-column: 6/7;
+  margin-top: 15px;
+}
