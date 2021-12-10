@@ -1,0 +1,14 @@
+.ColorPalette-palette {
+  border: 2px solid black;
+  display: flex;
+  column-gap: 4px;
+  padding: 2%;
+  list-style: none;
+}
+
+.ColorPalette-box {
+  height: 10px;
+  width: 10px;
+  border: 1px solid black;
+  margin: auto;
+}

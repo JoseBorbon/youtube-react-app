@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom';
 import SearchBar from './nav-children/SearchBar';
+import ColorSwitch from './nav-children/ColorSwitch';
 import './Nav.css';
 import youtubeLogo from '../../media/youtube-logo.png.svg';
 import homeLogo from '../../media/home-logo.png';
 
-const Nav = ({ getSearch, searchTerm, setSearchTerm }) => {
+const Nav = ({
+  getSearch,
+  searchTerm,
+  setSearchTerm,
+  isColorSwitchToggled,
+  setIsColorSwitchToggled,
+  setCurrBGColor,
+}) => {
   return (
     <nav>
         <div className="nav-youtube">

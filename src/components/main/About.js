@@ -9,9 +9,9 @@ import twitterLogo from '../../media/twttier.png'
 import githubLogo from '../../media/github.jpeg'
 import arrowIcon from '../../media/arrow.png'
 
-const About = () => {
+const About = ({ currBGColor }) => {
   return (
-    <main>
+    <main style={{ backgroundColor: currBGColor }}>
         <div className="about-container">
         <img className="project-pic"src={projectPic}/>
       <article className="project-description">

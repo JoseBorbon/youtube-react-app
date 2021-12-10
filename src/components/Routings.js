@@ -6,12 +6,17 @@ import Careers from './common/footer-children/Careers';
 import Contact from './common/footer-children/Contact';
 
 
-const Routings = ({ searchResults }) => {
+const Routings = ({ searchResults, currBGColor }) => {
   return (
     <Routes>
-      <Route path="/" element={<Home searchResults={searchResults} />} />
-      <Route path="about" element={<About />} />
-      <Route path="videos/*" element={<Media />} />
+      <Route
+        path="/"
+        element={
+          <Home searchResults={searchResults} currBGColor={currBGColor} />
+        }
+      />
+      <Route path="about" element={<About currBGColor={currBGColor} />} />
+      <Route path="videos/*" element={<Media currBGColor={currBGColor} />} />
       <Route path="career" element={<Careers/>} />
       <Route path="contact" element={<Contact />} />
     </Routes>

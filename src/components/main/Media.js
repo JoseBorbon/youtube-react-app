@@ -3,11 +3,11 @@ import Video from './media-children/Video';
 import Comments from './media-children/Comments';
 import './Media.css';
 
-const Media = () => {
+const Media = ({ currBGColor }) => {
   const ytVideoId = Object.values(useParams())[0];
 
   return (
-    <main className="Media-section">
+    <main className="Media-section" style={{ backgroundColor: currBGColor }}>
       <Video ytVideoId={ytVideoId} />
       <hr />
       <Comments />
