@@ -18,7 +18,7 @@ const Routings = ({ searchResults, currBGColor }) => {
       <Route path="about" element={<About currBGColor={currBGColor} />} />
       <Route path="videos/*" element={<Media currBGColor={currBGColor} />} />
       <Route path="career" element={<Careers/>} />
-      <Route path="contact" element={<Contact />} />
+      <Route path="contact" element={<Contact currBGColor={currBGColor}/>} />
     </Routes>
   );
 };

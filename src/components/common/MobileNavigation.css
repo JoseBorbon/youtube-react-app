@@ -1,0 +1,59 @@
+.Mobilenavbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 25px;
+  }
+  .menu-bars {
+    margin-left: 1rem;
+    font-size: 2rem;
+    background: none;
+  }
+  
+  .openMenu {
+    display: block;
+  }
+  .closeMenu {
+    display: none;
+  }
+  
+  .nav-menu {
+    width: auto;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 70;
+    left: -100%;
+    transition: 850ms;
+  }
+  .nav-menu.active {
+    left: 0;
+    transition: 350ms;
+  }
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0 8px 16px;
+  }
+  
+  .nav-text {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline-end: 0 16px;
+    border-radius: 4px;
+  }
+  
+  .nav-menu-items {
+    width: 10%;
+  }
+  span {
+    margin-left: 16px;
+  }
+  
