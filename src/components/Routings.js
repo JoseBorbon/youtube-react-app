@@ -5,7 +5,6 @@ import Media from './main/Media';
 import Careers from './common/footer-children/Careers';
 import Contact from './common/footer-children/Contact';
 
-
 const Routings = ({ searchResults, currBGColor }) => {
   return (
     <Routes>
@@ -17,8 +16,8 @@ const Routings = ({ searchResults, currBGColor }) => {
       />
       <Route path="about" element={<About currBGColor={currBGColor} />} />
       <Route path="videos/*" element={<Media currBGColor={currBGColor} />} />
-      <Route path="career" element={<Careers/>} />
-      <Route path="contact" element={<Contact />} />
+      <Route path="career" element={<Careers currBGColor={currBGColor} />} />
+      <Route path="contact" element={<Contact currBGColor={currBGColor} />} />
     </Routes>
   );
 };
