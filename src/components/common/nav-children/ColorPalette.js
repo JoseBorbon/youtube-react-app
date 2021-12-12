@@ -5,7 +5,7 @@ const ColorPalette = ({ setCurrBGColor }) => {
   const handleClick = (e) => {
     setCurrBGColor(e.target.id);
   };
-  const colors = ['red', 'blue', 'green', 'orange', 'yellow'];
+  const colors = ['RGB(24, 24, 24)', 'blue', 'green', 'orange', 'yellow'];
 
   const colorBoxes = colors.map((color) => (
     <li

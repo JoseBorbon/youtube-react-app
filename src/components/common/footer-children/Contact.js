@@ -5,7 +5,10 @@ import { Button, TextField, NativeSelect, FormControl } from '@mui/material';
 const Contact = ({ currBGColor }) => {
   return (
     <main className="contact" style={{ backgroundColor: currBGColor }}>
-      <FormControl className="showcase-form">
+      <FormControl
+        className="showcase-form"
+        style={{ color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'black' }}
+      >
         <h2>Get In Touch</h2>
         <TextField
           id="filled-name"
@@ -13,10 +16,14 @@ const Contact = ({ currBGColor }) => {
           fullWidth
           margin="normal"
           variant="filled"
-          className="mui-input"
           sx={{
+            color: 'white',
             margin: '0px',
             marginTop: '5px',
+          }}
+          InputLabelProps={{
+            className:
+              currBGColor === 'RGB(24, 24, 24)' ? 'textfield__label' : '',
           }}
         />
         <TextField
@@ -25,10 +32,13 @@ const Contact = ({ currBGColor }) => {
           fullWidth
           margin="normal"
           variant="filled"
-          className="mui-input"
           sx={{
             margin: '0px',
             marginTop: '5px',
+          }}
+          InputLabelProps={{
+            className:
+              currBGColor === 'RGB(24, 24, 24)' ? 'textfield__label' : '',
           }}
         />
         <TextField
@@ -36,10 +46,13 @@ const Contact = ({ currBGColor }) => {
           fullWidth
           autocomplete="none"
           variant="filled"
-          className="mui-input"
           sx={{
             margin: '0px',
             marginTop: '5px',
+          }}
+          InputLabelProps={{
+            className:
+              currBGColor === 'RGB(24, 24, 24)' ? 'textfield__label' : '',
           }}
         />
         <TextField
@@ -49,10 +62,13 @@ const Contact = ({ currBGColor }) => {
           rows={4}
           autocomplete="none"
           variant="filled"
-          className="mui-input"
           sx={{
             margin: '0px',
             marginTop: '5px',
+          }}
+          InputLabelProps={{
+            className:
+              currBGColor === 'RGB(24, 24, 24)' ? 'textfield__label' : '',
           }}
         />
         <NativeSelect
@@ -60,11 +76,14 @@ const Contact = ({ currBGColor }) => {
           id="demo-simple-select"
           defaultValue="default"
           label="Role"
-          // onChange={handleChange}
           fullWidth
           sx={{
             margin: '0px',
             marginTop: '5px',
+          }}
+          select={{
+            className:
+              currBGColor === 'RGB(24, 24, 24)' ? 'textfield__label' : '',
           }}
           variant="filled"
         >
