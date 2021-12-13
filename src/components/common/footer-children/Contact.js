@@ -73,17 +73,17 @@ const Contact = ({ currBGColor }) => {
         />
         <NativeSelect
           labelId="demo-simple-select-label"
-          id="demo-simple-select"
+          id={
+            currBGColor === 'RGB(24, 24, 24)'
+              ? 'demo-simple-select-dark'
+              : 'demo-simple-select'
+          }
           defaultValue="default"
           label="Role"
           fullWidth
           sx={{
             margin: '0px',
             marginTop: '5px',
-          }}
-          select={{
-            className:
-              currBGColor === 'RGB(24, 24, 24)' ? 'textfield__label' : '',
           }}
           variant="filled"
         >
