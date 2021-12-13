@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useCommentState } from '../../../hooks/useCommentState';
 import './Comments.css';
 
-const Comments = () => {
+const Comments = ({ currBGColor }) => {
   const [name, updateName, resetName] = useCommentState('');
   const [comment, updateComment, resetComment] = useCommentState('');
   const [comments, setComments] = useState([]);
@@ -17,7 +17,11 @@ const Comments = () => {
   };
 
   const sectionComments = comments.map(({ name, comment }) => (
-    <li className="Comments-comment" key={uuid()}>
+    <li
+      className="Comments-comment"
+      key={uuid()}
+      style={{ color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial' }}
+    >
       <p className="Comments-name">{name}</p>
       <p>{comment}</p>
     </li>
@@ -25,7 +29,13 @@ const Comments = () => {
 
   return (
     <div>
-      <form className="Comments-thread" onSubmit={handleSubmit}>
+      <form
+        className="Comments-thread"
+        onSubmit={handleSubmit}
+        style={{
+          color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial',
+        }}
+      >
         <label htmlFor="Comments-input-name">Name</label>
         <input
           className="Comments-input"

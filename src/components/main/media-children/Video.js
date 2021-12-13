@@ -2,7 +2,7 @@ import YouTube from 'react-youtube';
 import React, { useState, useEffect } from 'react';
 import './Video.css';
 
-const Video = ({ ytVideoId, opts }) => {
+const Video = ({ ytVideoId, opts, currBGColor }) => {
   const [videoInfo, setVideoInfo] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,10 @@ const Video = ({ ytVideoId, opts }) => {
   };
 
   return (
-    <div className="Youtube-video">
+    <div
+      className="Youtube-video"
+      style={{ color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial' }}
+    >
       <h3>{videoInfo.title}</h3>
       <YouTube videoId={ytVideoId} opts={opts} onReady={onReady} />
       <h4>{videoInfo.channelTitle}</h4>
