@@ -30,10 +30,28 @@ a {
 
 .search-bar {
  grid-column: 5;
- width: 800px;
+ width: 700px;
 }
 
 .color-switch {
   grid-column: 6/7;
   margin-top: 15px;
+  width: 90px;
+}
+
+.notification-logo img {
+  width: 5vh;
+  margin-top: 8px;
+  margin-left: 35px;
+}
+
+.more-logo img {
+  width: 5vh;
+  margin-top: 6px;
+  margin-left: 15px;
+}
+
+.pursuit-logo img {
+  width: 5vh;
+  margin-top: 8px;
 }

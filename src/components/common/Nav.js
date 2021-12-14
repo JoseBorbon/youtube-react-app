@@ -4,6 +4,9 @@ import ColorSwitch from './nav-children/ColorSwitch';
 import './Nav.css';
 import youtubeLogo from '../../media/youtube-logo.png.svg';
 import homeLogo from '../../media/home-logo.png';
+import notificationLogo from '../../media/notification.png';
+import moreLogo from '../../media/more.png';
+import pursuitLogo from '../../media/Pursuit.png';
 
 const Nav = ({
   getSearch,
@@ -12,6 +15,8 @@ const Nav = ({
   isColorSwitchToggled,
   setIsColorSwitchToggled,
   setCurrBGColor,
+  isTrue, 
+  toggleIt
 }) => {
   return (
     <nav>
@@ -33,8 +38,19 @@ const Nav = ({
             isColorSwitchToggled={isColorSwitchToggled}
             handleSetIsColorSwitchToggled={setIsColorSwitchToggled}
             setCurrBGColor={setCurrBGColor}
+            isTrue = {isTrue}
+            toggleIt = {toggleIt}
           />
           </div>
+        <div className='notification-logo'>
+          <img src={notificationLogo} alt='notification-logo' />
+        </div>
+        <div className='more-logo'  >
+          <img src={moreLogo} alt="more-logo"/>
+        </div>
+        <div className='pursuit-logo'  >
+          <img src={pursuitLogo} alt="pursuit-logo"  />
+        </div>
     </nav>
   );
 };

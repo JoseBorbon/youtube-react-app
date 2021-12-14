@@ -1,11 +1,13 @@
 import { v4 as uuid } from 'uuid';
 import './ColorPalette.css';
 
-const ColorPalette = ({ setCurrBGColor }) => {
+const ColorPalette = ({ setCurrBGColor, isTrue, toggleIt }) => {
+ 
   const handleClick = (e) => {
-    setCurrBGColor(e.target.id);
+    setCurrBGColor(e.target.id)
+    toggleIt(!isTrue)
   };
-  const colors = ['red', 'blue', 'green', 'orange', 'yellow'];
+  const colors = ['red', 'blue', 'green', 'orange', 'yellow', "white"];
 
   const colorBoxes = colors.map((color) => (
     <li

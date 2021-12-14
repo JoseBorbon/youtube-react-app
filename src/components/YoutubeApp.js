@@ -8,7 +8,7 @@ const YoutubeApp = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currBGColor, setCurrBGColor] = useState('white');
   const [isColorSwitchToggled, setIsColorSwitchToggled] = useState(false);
-
+  const [isTrue, toggleIt] = useState(false);
   const getSearch = () => {
     if (!searchTerm) return;
     const query = searchTerm
@@ -48,6 +48,8 @@ const YoutubeApp = () => {
         isColorSwitchToggled={isColorSwitchToggled}
         setIsColorSwitchToggled={setIsColorSwitchToggled}
         setCurrBGColor={setCurrBGColor}
+        isTrue = {isTrue}
+        toggleIt = {toggleIt}
       />
       <Routings searchResults={searchResults} currBGColor={currBGColor} />
       <Footer />

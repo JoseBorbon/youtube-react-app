@@ -7,7 +7,7 @@ import teamPic from '../../media/team-pic.jpg';
 import linkedInLogo from '../../media/linkedIn.png'
 import twitterLogo from '../../media/twttier.png'
 import githubLogo from '../../media/github.jpeg'
-import arrowIcon from '../../media/arrow.png'
+
 
 const About = ({ currBGColor }) => {
   return (
@@ -70,10 +70,6 @@ const About = ({ currBGColor }) => {
         </a>
         <div className='jose-learn-about-page'>
           <p>Learn More About Jose</p>
-          <img className="arrow-icon" src={arrowIcon} alt='arrow-icon'/>
-        </div>
-        </div>
-        {/* <article className="about-jose-bio">
           <p>
             Former Facebook IT Employee who seeks new challenges. I am a Full
             Stack Software Engineer that specializes in the MERN stack. On the
@@ -82,7 +78,8 @@ const About = ({ currBGColor }) => {
             activities include running marathons, traveling, watching anime,
             playing video games and building computers.
           </p>
-        </article> */}
+        </div>
+        </div>
   
       <div className="about-ki-sub-profile">
         <a
@@ -114,10 +111,6 @@ const About = ({ currBGColor }) => {
         </a>
         <div className='kisub-learn-about-page'>
           <p>Learn More About Ki Sub</p>
-          <img className="arrow-icon" src={arrowIcon} alt='arrow-icon'/>
-        </div>
-          </div>
-        {/* <article className="about-ki-sub-bio">
           <p>
             Full Stack Web developer with a background in studio art. I have a
             great interest in building visually beautiful and engaging apps. I
@@ -126,7 +119,9 @@ const About = ({ currBGColor }) => {
             stories for the future generations to come, starting right here in
             the USA. During my spare time, I like to run, paint, or play soccer.
           </p>
-        </article> */}
+        </div>
+          </div>
+    
          <div className="about-jalamang-profile">
         <a
           href="https://github.com/Jalamang"
@@ -134,7 +129,7 @@ const About = ({ currBGColor }) => {
           rel="noreferrer"
        
         >
-          <img  src={jalamang} alt="jalamang's profile"/>
+          <img  src={jalamang} alt="jalamang's profile"x/>
           <h4>Jalamang Janka, Good employee</h4>
           <p>Full-Stack Web Developer at Amazon</p>
 
@@ -159,10 +154,6 @@ const About = ({ currBGColor }) => {
         </a>
         <div className='jalamang-learn-about-page'>
           <p>Learn More About Jalamang</p>
-          <img className="arrow-icon" src={arrowIcon} alt='arrow-icon'/>
-        </div>
-        </div>
-        {/* <article className="about-jalamang-bio">
           <p>
             Self-motivated, results-driven, and passionate about technology,
             constantly learning and self-educating in today's ever-changing IT
@@ -170,7 +161,9 @@ const About = ({ currBGColor }) => {
             bachelor's degree in Computer Information Systems with fundamental
             knowledge in Java, Python, CSS, JavaScript, and SQL/Oracle Database.
           </p>
-          </article> */}
+        </div>
+        </div>
+        <h3 className='ad'>Wanna Join Us? <br></br>Check out our Career page!</h3>
         </article>
       
     </main>

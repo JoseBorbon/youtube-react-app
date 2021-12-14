@@ -5,3 +5,18 @@ Exact style TBD
 values attached to each of them
 
 */
+
+.color-switch button{
+    box-shadow: 0 0 10px -5px rgb(67, 106, 173);
+    color: #ffffff;
+    animation: boxShadow 20s linear infinite;
+    background: linear-gradient(45deg, #00acfc, #0000ff, #00ff00, #ff0000, #ffff00, #fc0090, #0000ff, #00ff00, #ff0000, #ffff00);
+    background-size: 300%;
+    opacity: .8;
+}
+
+@keyframes boxShadow {
+    0%{background-position: 0 0;}
+    50%{background-position: 400%;}
+    100%{background-position: 0 0;}
+}

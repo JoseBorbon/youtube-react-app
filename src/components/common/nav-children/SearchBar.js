@@ -12,7 +12,7 @@ const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
   };
 
   return (
-    <form onSubmit={(e) => handleGetSearch(e)}>
+    <form onSubmit={(e) => handleGetSearch(e)} className='search-bar'>
       <input
         className ="input-area"
         type="text"
