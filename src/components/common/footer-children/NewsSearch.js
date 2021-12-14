@@ -74,7 +74,7 @@ export const NewsSearch = (props) => {
           <option value="pt">Portuguese</option>
           <option value="he">Hebrew</option>
         </select>
-        <select id="operation" name="operation" onChange={props.handleLanguage}>
+        <select onChange={props.handleSort} id="operation" name="operation">
           <option value="">Sort By</option>
           <option value="relevancy">Relevancy</option>
           <option value="popularity">Popularity</option>
