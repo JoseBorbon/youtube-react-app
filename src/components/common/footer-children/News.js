@@ -1,5 +1,5 @@
 import { NewsSearch } from './NewsSearch';
-import { Component } from 'react/cjs/react.development';
+import React, { Component } from 'react';
 import './News.css';
 
 export class News extends Component {
