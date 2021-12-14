@@ -1,56 +1,65 @@
 import './NewsSearch.css';
 
 export const NewsSearch = (props) => {
-
-    console.log(props.newsData.articles)
-
-    const editNewsContent=(str)=> {
-        const content = str.split(" ").slice(0, 40).join(" ")
-        let result = ""
-        let endPoint = 0
-        if (content.includes("[")) {
-            for (let i = 0; i < content.length; i++) {
-                if (content[i] === "[") {
-                    endPoint = i
-                   result = content.slice(0, endPoint)
-                }
-            
-            }
-
-        } 
-        return result
+  const editNewsContent = (str) => {
+    const content = str.split(' ').slice(0, 40).join(' ');
+    let result = '';
+    let endPoint = 0;
+    if (content.includes('[')) {
+      for (let i = 0; i < content.length; i++) {
+        if (content[i] === '[') {
+          endPoint = i;
+          result = content.slice(0, endPoint);
+        }
+      }
     }
+    return result;
+  };
 
-
-    const displayNews = props.newsData.status==="ok" && props.newsData.articles.map((news, i) => {
-        
-        return (
-
+  const displayNews =
+    props.newsData.status === 'ok' &&
+    props.newsData.articles.map((news, i) => {
+      return (
         <div key={i}>
-            <article className="article">
-                <h3>{news.title} <br></br><span className='author'> by {news.author ==="" ? "No source" : news.author }</span></h3>
-                <a href={news.url} rel="noreferrer" target="_blank"><img src={news.urlToImage} alt='article'/></a>
-                <p className='news-content'>
-                    {news.content && editNewsContent(news.content)} 
-                    <a className='career-for-link' rel="noreferrer" target={"_blank"} href={news.url}>
-                        Click Here to Read More
-                    </a>
-                    </p>
-                
-             </article>
-            <div className='line'></div>
+          <article className="article">
+            <h3>
+              {news.title} <br></br>
+              <span className="author">
+                {' '}
+                by {news.author === '' ? 'No source' : news.author}
+              </span>
+            </h3>
+            <a href={news.url} rel="noreferrer" target="_blank">
+              <img src={news.urlToImage} alt="article" />
+            </a>
+            <p className="news-content">
+              {news.content && editNewsContent(news.content)}
+              <a
+                className="career-for-link"
+                rel="noreferrer"
+                target={'_blank'}
+                href={news.url}
+              >
+                Click Here to Read More
+              </a>
+            </p>
+          </article>
+          <div className="line"></div>
         </div>
-        )
-      
-    })
+      );
+    });
 
+  console.log(props.state.language, 'and', props.state.userInput);
 
-    console.log(props.state.language, "and" , props.state.userInput)
-
-    return (
-        <>
-        <form onSubmit={props.fetchNewsData} className='news-form'>
-        <input id="values" name="search-news" type="text" onChange={props.handleUserInput} />
+  return (
+    <>
+      <form onSubmit={props.fetchNewsData} className="news-form">
+        <input
+          id="values"
+          name="search-news"
+          type="text"
+          onChange={props.handleUserInput}
+        />
         <select id="operation" name="operation" onChange={props.handleLanguage}>
           <option value="">Choose your language</option>
           <option value="en">English</option>
@@ -73,8 +82,7 @@ export const NewsSearch = (props) => {
         </select>
         <button>Search</button>
       </form>
-            {displayNews}
-        
-        </>
-        )
-}
+      {displayNews}
+    </>
+  );
+};
