@@ -9,10 +9,10 @@ export class News extends Component {
       newsData: '',
       userInput: '',
       language: '',
-      sort: "",
+      sort: '',
     };
   }
-  
+
   componentDidMount() {
     const { userInput, language } = this.state;
     fetch(`
@@ -20,7 +20,6 @@ export class News extends Component {
       userInput === ''
         ? 'top-headlines?country=us&apiKey=523f9a47b6ea4d95b8ce576a58d143b6'
         : `everything?q=${userInput}&from=2021-11-13&sortBy=publishedAtrelevancy&language=${language}&apiKey=523f9a47b6ea4d95b8ce576a58d143b6`
-
     }
     `)
       .then((response) => response.json())
@@ -31,14 +30,18 @@ export class News extends Component {
       })
       .catch(console.log);
   }
-    
-    fetchNewsData =(e)=> {
-      e.preventDefault()
-      const {userInput, language, sort} = this.state
-      fetch (`
-      https://newsapi.org/v2/${userInput === "" ? 
-      "top-headlines?country=us&apiKey=523f9a47b6ea4d95b8ce576a58d143b6" :
-      `everything?q=${userInput}&from=2021-11-13&sortBy=${sort === "" ? "relevancy" : sort }&language=${language}&apiKey=523f9a47b6ea4d95b8ce576a58d143b6`}
+
+  fetchNewsData = (e) => {
+    e.preventDefault();
+    const { userInput, language, sort } = this.state;
+    fetch(`
+      https://newsapi.org/v2/${
+        userInput === ''
+          ? 'top-headlines?country=us&apiKey=523f9a47b6ea4d95b8ce576a58d143b6'
+          : `everything?q=${userInput}&from=2021-11-13&sortBy=${
+              sort === '' ? 'relevancy' : sort
+            }&language=${language}&apiKey=523f9a47b6ea4d95b8ce576a58d143b6`
+      }
       `)
       .then((response) => response.json())
       .then((data) => {
@@ -61,37 +64,32 @@ export class News extends Component {
     });
   };
 
- handleSort = (e) =>{
-  this.setState  ({
-    sort: e.target.value
-  })
-}
+  handleSort = (e) => {
+    this.setState({
+      sort: e.target.value,
+    });
+  };
 
-handleUserInput = (e) =>{
-    this.setState  ({
-      userInput: e.target.value
-    })
+  handleUserInput = (e) => {
+    this.setState({
+      userInput: e.target.value,
+    });
+  };
+
+  render() {
+    return (
+      <main>
+        <div className="news-box">
+          <NewsSearch
+            newsData={this.state.newsData}
+            handleLanguage={this.handleLanguage}
+            handleSort={this.handleSort}
+            handleUserInput={this.handleUserInput}
+            state={this.state}
+            fetchNewsData={this.fetchNewsData}
+          />
+        </div>
+      </main>
+    );
   }
-
- 
-
-
-
-        render () {
-            return(
-
-                    <main>
-                        <div className="news-box">
-                            <NewsSearch 
-                                newsData = {this.state.newsData}
-                                handleLanguage = {this.handleLanguage}
-                                handleSort ={this.handleSort}
-                                handleUserInput ={this.handleUserInput}
-                                state = {this.state}
-                                fetchNewsData = {this.fetchNewsData}/>
-                        </div>
-                    </main>
-
-            )
-        }
 }
