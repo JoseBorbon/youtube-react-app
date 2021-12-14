@@ -11,23 +11,26 @@ const Searches = ({ searchResults, currBGColor }) => {
         className="Youtube-thumbnail"
       >
         <img src={thumbnail} alt={title} />
-        <h4 dangerouslySetInnerHTML={createMarkup(title)} />
+        <h4
+          dangerouslySetInnerHTML={createMarkup(title)}
+          style={{
+            color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial',
+          }}
+        />
       </Link>
     );
   });
 
   return (
-    <main className="Youtube-searches" style={{ backgroundColor: currBGColor }}>
+    <main
+      className="Youtube-searches"
+      style={{
+        backgroundColor: currBGColor,
+      }}
+    >
       {thumbnails}
     </main>
   );
 };
-
-// Searches.defaultProps = {
-//   opts: {
-//     height: '400',
-//     width: 'auto',
-//   },
-// };
 
 export default Searches;

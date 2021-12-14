@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Nav from './common/Nav';
 import Routings from './Routings';
 import Footer from './common/Footer';
+// import MobileNavigation from './common/mobile-navigation/MobileNav';
 
 const YoutubeApp = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [currBGColor, setCurrBGColor] = useState('white');
+  const [currBGColor, setCurrBGColor] = useState(() => {
+    const saved = localStorage.getItem('currBGColor');
+    const initialValue = JSON.parse(saved);
+    return initialValue || 'white';
+  });
   const [isColorSwitchToggled, setIsColorSwitchToggled] = useState(false);
   const [isTrue, toggleIt] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('currBGColor', JSON.stringify(currBGColor));
+  }, [currBGColor]);
+
   const getSearch = () => {
     if (!searchTerm) return;
     const query = searchTerm
@@ -51,6 +61,7 @@ const YoutubeApp = () => {
         isTrue = {isTrue}
         toggleIt = {toggleIt}
       />
+      {/* <MobileNavigation /> */}
       <Routings searchResults={searchResults} currBGColor={currBGColor} />
       <Footer />
     </>

@@ -8,9 +8,10 @@ const Media = ({ currBGColor }) => {
 
   return (
     <main className="Media-section" style={{ backgroundColor: currBGColor }}>
-      <Video ytVideoId={ytVideoId} />
+      <Video ytVideoId={ytVideoId} currBGColor={currBGColor} />
       <hr />
-      <Comments />
+      <Comments currBGColor={currBGColor} />
+      
     </main>
   );
 };

@@ -35,3 +35,6 @@ label {
   font-size: x-large;
   margin: 0;
 }
+.bt-comment {
+  width: 10vh;
+}

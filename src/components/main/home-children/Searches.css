@@ -1,10 +1,12 @@
+
+
 .Youtube-searches {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 30px;
+  margin-top: 30px;
 }
 .Youtube-searches > * {
-  /* margin-right: 50%;
-  margin-left: auto; */
   margin-top: 25px;
   margin-left: 10px;
   margin-right: 10px;
@@ -30,3 +32,5 @@ h4 {
   /* filter: saturate(10%); This is another effect I was trying out in case you guys want to try this instead of opacity*/
   filter: opacity(70%);
 }
+
+

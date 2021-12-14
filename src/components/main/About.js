@@ -11,12 +11,14 @@ import githubLogo from '../../media/github.jpeg'
 
 const About = ({ currBGColor }) => {
   return (
-    <main style={{ backgroundColor: currBGColor }}>
+    <main style={{ backgroundColor: currBGColor,
+      color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial', }}>
         <div className="about-container">
         <img className="project-pic"src={projectPic} alt='project-pic'/>
-      <article className="project-description">
+      <article className="project-description" >
         <h1>About our project</h1>
-        <p>
+        <p style={{ backgroundColor: currBGColor,
+        color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial', }}>
           We believe learning should start wherever you are. Our mission is to give people around the world access to education that they seek.
           This project was produced with functional components and react hooks.
           The purpose of it is to create a clone of youtube with a few
@@ -28,15 +30,15 @@ const About = ({ currBGColor }) => {
       <img className="team-pic"src={teamPic} alt='team-pic'/>
       <article className="team-description">
         <h1>Who we are</h1>
-        <p>
+        <p style={{ backgroundColor: currBGColor,
+      color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial', }}>
           Our team is composed of people with unique talents. 
           The three co-founders Jose, Ki Sub and Jalamang became friends during their time at the prestigious Pursuit Fellowship where they received their training to become a Full-Stack Web developer. JKJ has now become a company with +30 employees from all around the world including Spain, Mexico, Island, and their home USA.
         </p>
       </article>
         </div>
 
-
-        <article className="team-list">
+      <article className="team-list">
         <h1>Meet our team</h1>
         <div className='about-jose-profile'>
         <a
@@ -51,7 +53,7 @@ const About = ({ currBGColor }) => {
             href="https://www.linkedin.com/in/joseborbon/"
             target="_blank"
             rel="noreferrer"
-            >
+          >
                <img src ={linkedInLogo} className="logos" alt='linkedIn-logo'/> 
           </a>
           <a 
@@ -102,8 +104,8 @@ const About = ({ currBGColor }) => {
                <img src ={twitterLogo} className="logos-resize" alt='twitter-logo'/>
           </a>
 
-          <a 
-            href='https://github.com/kisublee'
+          <a
+            href="https://github.com/kisublee"
             target="_blank"
             rel="noreferrer">
                <img src ={githubLogo} className="logos-resize" alt='github-logo' />
@@ -137,7 +139,8 @@ const About = ({ currBGColor }) => {
             href="https://www.linkedin.com/in/jalamang/"
             target="_blank"
             rel="noreferrer">
-               <img src ={linkedInLogo} className="logos" alt='linkedIn-logo'/> </a>
+               <img src ={linkedInLogo} className="logos" alt='linkedIn-logo'/> 
+          </a>
           <a 
             href='https://twitter.com/jalaminy'
             target="_blank"

@@ -15,6 +15,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -27,6 +28,20 @@
     <title>React App</title>
   </head>
   <body>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input type="text" name="company" placeholder="Company Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <select name="role[]" multiple>
+        <option value="leader">Team Lead</option>
+        <option value="follower">Full Stack Developer</option>
+        <option value="follower">Front-End Developer</option>
+        <option value="follower">Software Engineer</option>
+      </select>
+      <input type="file" name="myfile" placeholder="Upload file" />
+      <textarea id="message" name="message" required></textarea>
+    </form>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

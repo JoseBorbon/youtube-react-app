@@ -7,7 +7,7 @@ const ColorPalette = ({ setCurrBGColor, isTrue, toggleIt }) => {
     setCurrBGColor(e.target.id)
     toggleIt(!isTrue)
   };
-  const colors = ['red', 'blue', 'green', 'orange', 'yellow', "white"];
+  const colors = ['RGB(24, 24, 24)', 'blue', 'green', 'orange', 'yellow', "white"];
 
   const colorBoxes = colors.map((color) => (
     <li

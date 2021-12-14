@@ -151,9 +151,8 @@ img {
     margin-left: 15%;
     margin-right: 15%;
     border-radius: 20px;
-    padding-top: 0px;
     margin-top: 2px;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
 }
 
 .about-jalamang-profile p, .about-ki-sub-profile p, .about-jose-profile p {
@@ -168,18 +167,11 @@ img {
 .about-jalamang-profile img {
   border-radius: 50%;
   border: 5px solid rgb(229, 237, 195);
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 
-.about-jalamang-bio {
-  grid-column: 1fr;
-  font-size: 1.3vh;
-  text-align: left;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  grid-row: 3;
-}
+
 
 .logos {
   border: none !important;
@@ -237,8 +229,8 @@ img {
   background-color: rgb(218, 195, 195);
   padding: 35px 0;
   border-radius: 20px;
-  margin-top: -38px;
-  margin-bottom: -40px;
+  margin-top: -28px;
+  margin-bottom: -20px;
 }
 
 /* .arrow-icon{
@@ -266,5 +258,5 @@ img {
   margin-top: 15vh;
   font-size: xx-large;
   color: rgb(240, 221, 221);
-  grid-column: 2/3;
+  grid-column: 1/4;
 }
