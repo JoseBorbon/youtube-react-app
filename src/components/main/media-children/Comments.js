@@ -16,10 +16,6 @@ const Comments = ({ currBGColor }) => {
     resetComment('');
   };
 
-  const handleDelete = ({comments, comment}) => {
-      const deleteComment = comment && alert("test");
-  }
-
 
   const sectionComments = comments.map(({ name, comment }) => (
     <li
@@ -27,8 +23,9 @@ const Comments = ({ currBGColor }) => {
       key={uuid()}
       style={{ color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial' }}
     >
-      <p className="Comments-name">{name}</p>
-      <p>{comment}</p>
+      <p className="Comments-name">User Name: {name}</p>
+      <p> Comment: {comment}</p>
+      <div className='line-divider'></div>
     </li>
   ));
 
@@ -61,10 +58,10 @@ const Comments = ({ currBGColor }) => {
           placeholder="..."
         />
         <input className="Comments-submit-button" type="submit" />
-        <button onClick={handleDelete} className='bt-comment'>Delete</button>
+        <button className='bt-comment'>Delete</button>
         <button className='bt-comment'>Edit</button>
       </form>
-      <hr style={{ width: '80%' }} />
+      <hr style={{ width: '100%' }} />
       <ul className="Comments-list">{sectionComments}</ul>
     </div>
   );
