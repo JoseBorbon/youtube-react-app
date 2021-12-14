@@ -11,6 +11,7 @@ const Media = ({ currBGColor }) => {
       <Video ytVideoId={ytVideoId} currBGColor={currBGColor} />
       <hr />
       <Comments currBGColor={currBGColor} />
+      
     </main>
   );
 };

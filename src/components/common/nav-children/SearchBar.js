@@ -12,7 +12,7 @@ const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
   };
 
   return (
-    <form onSubmit={(e) => handleGetSearch(e)}>
+    <form onSubmit={(e) => handleGetSearch(e)} className='search-bar'>
       <input
         className ="input-area"
         type="text"
@@ -20,7 +20,7 @@ const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         value={searchTerm}
       />
-      <button className="search-icon" type="submit"><img src={searchIcon} className="search-icon-size"  /></button>
+      <button className="search-icon" type="submit"><img src={searchIcon} className="search-icon-size" alt='search-icon' /></button>
     </form>
   );
 };

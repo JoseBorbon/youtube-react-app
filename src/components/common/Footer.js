@@ -13,6 +13,9 @@ const Footer = () => {
           <li>
           <Link to="/contact">Contacts</Link>
           </li>
+          <li>
+            <Link to="/news">News</Link>
+          </li>
         </ul> 
     </footer>
   );

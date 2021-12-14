@@ -33,3 +33,11 @@ footer {
   color: white;
   text-align: center;
 }
+
+@media screen and (min-width: 1150px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2vh 92vh 7vh;
+  }
+}

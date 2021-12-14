@@ -1,5 +1,5 @@
 .ColorPalette-palette {
-  border: 2px solid black;
+  border: 2px solid rgb(182, 128, 128);
   display: flex;
   column-gap: 4px;
   padding: 2%;
@@ -9,6 +9,6 @@
 .ColorPalette-box {
   height: 10px;
   width: 10px;
-  border: 1px solid black;
+  border: 1px solid rgb(147, 53, 36);
   margin: auto;
 }

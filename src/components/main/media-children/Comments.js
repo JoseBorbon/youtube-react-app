@@ -16,6 +16,11 @@ const Comments = ({ currBGColor }) => {
     resetComment('');
   };
 
+  const handleDelete = ({comments, comment}) => {
+      const deleteComment = comment && alert("test");
+  }
+
+
   const sectionComments = comments.map(({ name, comment }) => (
     <li
       className="Comments-comment"
@@ -26,6 +31,7 @@ const Comments = ({ currBGColor }) => {
       <p>{comment}</p>
     </li>
   ));
+
 
   return (
     <div>
@@ -55,6 +61,8 @@ const Comments = ({ currBGColor }) => {
           placeholder="..."
         />
         <input className="Comments-submit-button" type="submit" />
+        <button onClick={handleDelete} className='bt-comment'>Delete</button>
+        <button className='bt-comment'>Edit</button>
       </form>
       <hr style={{ width: '80%' }} />
       <ul className="Comments-list">{sectionComments}</ul>

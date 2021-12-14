@@ -1,19 +1,22 @@
 import ColorPalette from './ColorPalette';
+import './ColorSwitch.css';
 
 const ColorSwitch = ({
   isColorSwitchToggled,
   handleSetIsColorSwitchToggled,
   currBGColor,
   setCurrBGColor,
+  isTrue, 
+  toggleIt,
 }) => {
-  return isColorSwitchToggled ? (
-    <ColorPalette currBGColor={currBGColor} setCurrBGColor={setCurrBGColor} />
+  return isTrue ? (
+    <ColorPalette currBGColor={currBGColor} setCurrBGColor={setCurrBGColor} isTrue={isTrue} toggleIt={toggleIt} />
   ) : (
     <button
       style={{ height: '20px', width: '50px' }}
-      onClick={() => handleSetIsColorSwitchToggled(true)}
+      onClick={() => toggleIt(!isTrue)}
     >
-      Colors
+      
     </button>
   );
 };

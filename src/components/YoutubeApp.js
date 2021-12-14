@@ -7,6 +7,7 @@ const YoutubeApp = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [isColorSwitchToggled, setIsColorSwitchToggled] = useState(false);
+  const [isTrue, toggleIt] = useState(false);
   const [currBGColor, setCurrBGColor] = useState(() => {
     const saved = localStorage.getItem('currBGColor');
     const initialValue = JSON.parse(saved);
@@ -56,6 +57,8 @@ const YoutubeApp = () => {
         isColorSwitchToggled={isColorSwitchToggled}
         setIsColorSwitchToggled={setIsColorSwitchToggled}
         setCurrBGColor={setCurrBGColor}
+        isTrue = {isTrue}
+        toggleIt = {toggleIt}
       />
       <Routings searchResults={searchResults} currBGColor={currBGColor} />
       <Footer />
