@@ -41,7 +41,7 @@ export const NewsSearch = (props) => {
             <div className='line'></div>
         </div>
         )
-     
+      
     })
 
 
