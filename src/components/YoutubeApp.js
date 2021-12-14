@@ -6,12 +6,12 @@ import Footer from './common/Footer';
 const YoutubeApp = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isColorSwitchToggled, setIsColorSwitchToggled] = useState(false);
   const [currBGColor, setCurrBGColor] = useState(() => {
     const saved = localStorage.getItem('currBGColor');
     const initialValue = JSON.parse(saved);
     return initialValue || 'white';
   });
-  const [isColorSwitchToggled, setIsColorSwitchToggled] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('currBGColor', JSON.stringify(currBGColor));
