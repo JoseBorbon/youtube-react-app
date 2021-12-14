@@ -4,7 +4,7 @@ label {
 }
 
 .Comments-thread {
-  margin-top: 100px;
+  margin-top: 50px;
   display: grid;
   row-gap: 1vh;
   margin-left: 5vh;
@@ -15,6 +15,7 @@ label {
 
 .Comments-submit-button {
   width: 10vh;
+  
 }
 
 .Comments-input {
@@ -23,18 +24,47 @@ label {
 }
 
 .Comments-list {
-  margin-left: 25vh;
-  padding-left: 0;
-  width: 80vh;
   list-style-type: none;
-  text-align: left;
+  margin-top: 10px;
   overflow-y: auto !important;
+  padding-bottom: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 30px;
+}
+
+.Comments-comment:hover {
+  background-color: rgb(187, 156, 145);
+}
+
+.Comments-comment{
+  background-color: rgb(231, 191, 191);
+  grid-column: 2/3;
+
+}
+
+.line-divider {
+  margin-top: 8px;
+  background-color: rgb(214, 155, 155);
+  height: 3px;
 }
 
 .Comments-name {
-  font-size: x-large;
-  margin: 0;
+  padding:10px;
+  font-size: medium;
+  text-align: left;
 }
+.Comments-comment p {
+  margin-top: 10px;
+  font-size: medium;
+  display:block;
+  text-align: left;
+  padding: 0 5px 0 5px;
+}
+
+
 .bt-comment {
   width: 10vh;
 }

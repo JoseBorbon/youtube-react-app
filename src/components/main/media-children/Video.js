@@ -24,9 +24,10 @@ const Video = ({ ytVideoId, opts, currBGColor }) => {
       className="Youtube-video"
       style={{ color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial' }}
     >
-      <h3>{videoInfo.title}</h3>
+       <h4>Channel: {videoInfo.channelTitle}</h4>
       <YouTube videoId={ytVideoId} opts={opts} onReady={onReady} />
-      <h4>{videoInfo.channelTitle}</h4>
+      <h3>Title: {videoInfo.title}</h3>
+     
     </div>
   );
 };
