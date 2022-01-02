@@ -1,9 +1,12 @@
 import { v4 as uuid } from 'uuid';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ThemeContext } from '../../../contexts/theme.context';
 import { useCommentState } from '../../../hooks/useCommentState';
+
 import './Comments.css';
 
-const Comments = ({ currBGColor }) => {
+const Comments = () => {
+  const { isDark } = useContext(ThemeContext);
   const [name, updateName, resetName] = useCommentState('');
   const [comment, updateComment, resetComment] = useCommentState('');
   const [comments, setComments] = useState([]);
@@ -16,19 +19,17 @@ const Comments = ({ currBGColor }) => {
     resetComment('');
   };
 
-
   const sectionComments = comments.map(({ name, comment }) => (
     <li
       className="Comments-comment"
       key={uuid()}
-      style={{ color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial' }}
+      style={{ color: isDark ? 'white' : 'initial' }}
     >
       <p className="Comments-name">User Name: {name}</p>
       <p> Comment: {comment}</p>
-      <div className='line-divider'></div>
+      <div className="line-divider"></div>
     </li>
   ));
-
 
   return (
     <div>
@@ -36,7 +37,7 @@ const Comments = ({ currBGColor }) => {
         className="Comments-thread"
         onSubmit={handleSubmit}
         style={{
-          color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial',
+          color: isDark ? 'white' : 'initial',
         }}
       >
         <label htmlFor="Comments-input-name">Name</label>
@@ -58,8 +59,8 @@ const Comments = ({ currBGColor }) => {
           placeholder="..."
         />
         <input className="Comments-submit-button" type="submit" />
-        <button className='bt-comment'>Delete</button>
-        <button className='bt-comment'>Edit</button>
+        <button className="bt-comment">Delete</button>
+        <button className="bt-comment">Edit</button>
       </form>
       <hr style={{ width: '100%' }} />
       <ul className="Comments-list">{sectionComments}</ul>

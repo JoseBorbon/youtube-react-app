@@ -1,11 +1,14 @@
 import './Landing.css';
+import { useContext } from 'react';
+import { ThemeContext } from '../../../contexts/theme.context';
 
-const Landing = ({ currBGColor }) => {
+const Landing = () => {
+  const { color, isDark } = useContext(ThemeContext);
   return (
     <main
       style={{
-        backgroundColor: currBGColor,
-        color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial',
+        backgroundColor: color,
+        color: isDark ? 'white' : 'initial',
       }}
     >
       <p>No Searches....yet!</p>

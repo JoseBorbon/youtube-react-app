@@ -8,49 +8,38 @@ import notificationLogo from '../../media/notification.png';
 import moreLogo from '../../media/more.png';
 import pursuitLogo from '../../media/Pursuit.png';
 
-const Nav = ({
-  getSearch,
-  searchTerm,
-  setSearchTerm,
-  isColorSwitchToggled,
-  setIsColorSwitchToggled,
-  setCurrBGColor,
-  isTrue, 
-  toggleIt
-}) => {
+const Nav = ({ getSearch, searchTerm, setSearchTerm, isTrue, toggleIt }) => {
   return (
     <nav>
-        <div className="nav-youtube">
-          <Link to="/"><img src ={youtubeLogo} className="youtube-logo" alt="youtube-logo"/></Link>
-        </div>
-        <div className="nav-home">
-          <Link to="/"><img src ={homeLogo} className="home-logo" alt='home-logo'/></Link>
-        </div>
-        <div className = "search-bar">
-        <SearchBar 
+      <div className="nav-youtube">
+        <Link to="/">
+          <img src={youtubeLogo} className="youtube-logo" alt="youtube-logo" />
+        </Link>
+      </div>
+      <div className="nav-home">
+        <Link to="/">
+          <img src={homeLogo} className="home-logo" alt="home-logo" />
+        </Link>
+      </div>
+      <div className="search-bar">
+        <SearchBar
           searchTerm={searchTerm}
           setSearchTerm={setSearchTerm}
           getSearch={getSearch}
         />
-        </div>
-        <div className ="color-switch" >
-          <ColorSwitch 
-            isColorSwitchToggled={isColorSwitchToggled}
-            handleSetIsColorSwitchToggled={setIsColorSwitchToggled}
-            setCurrBGColor={setCurrBGColor}
-            isTrue = {isTrue}
-            toggleIt = {toggleIt}
-          />
-          </div>
-        <div className='notification-logo'>
-          <img src={notificationLogo} alt='notification-logo' />
-        </div>
-        <div className='more-logo'  >
-          <img src={moreLogo} alt="more-logo"/>
-        </div>
-        <div className='pursuit-logo'  >
-          <img src={pursuitLogo} alt="pursuit-logo"  />
-        </div>
+      </div>
+      <div className="color-switch">
+        <ColorSwitch isTrue={isTrue} toggleIt={toggleIt} />
+      </div>
+      <div className="notification-logo">
+        <img src={notificationLogo} alt="notification-logo" />
+      </div>
+      <div className="more-logo">
+        <img src={moreLogo} alt="more-logo" />
+      </div>
+      <div className="pursuit-logo">
+        <img src={pursuitLogo} alt="pursuit-logo" />
+      </div>
     </nav>
   );
 };

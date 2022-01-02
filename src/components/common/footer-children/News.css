@@ -1,9 +1,0 @@
-.news-box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 70px;
-    padding-bottom: 10vh;
-}

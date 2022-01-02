@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../../contexts/theme.context';
 import createMarkup from '../../../utilities/createMarkup';
 import './Searches.css';
 
-const Searches = ({ searchResults, currBGColor }) => {
+const Searches = ({ searchResults }) => {
+  const { color, isDark } = useContext(ThemeContext);
   const thumbnails = searchResults.map(({ title, videoId, thumbnail }) => {
     return (
       <Link
@@ -14,7 +17,7 @@ const Searches = ({ searchResults, currBGColor }) => {
         <h4
           dangerouslySetInnerHTML={createMarkup(title)}
           style={{
-            color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial',
+            color: isDark ? 'white' : 'initial',
           }}
         />
       </Link>
@@ -25,7 +28,7 @@ const Searches = ({ searchResults, currBGColor }) => {
     <main
       className="Youtube-searches"
       style={{
-        backgroundColor: currBGColor,
+        backgroundColor: color,
       }}
     >
       {thumbnails}

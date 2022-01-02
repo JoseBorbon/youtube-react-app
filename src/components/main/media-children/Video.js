@@ -1,8 +1,10 @@
 import YouTube from 'react-youtube';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ThemeContext } from '../../../contexts/theme.context';
 import './Video.css';
 
-const Video = ({ ytVideoId, opts, currBGColor }) => {
+const Video = ({ ytVideoId, opts }) => {
+  const { isDark } = useContext(ThemeContext);
   const [videoInfo, setVideoInfo] = useState([]);
 
   useEffect(() => {
@@ -22,12 +24,11 @@ const Video = ({ ytVideoId, opts, currBGColor }) => {
   return (
     <div
       className="Youtube-video"
-      style={{ color: currBGColor === 'RGB(24, 24, 24)' ? 'white' : 'initial' }}
+      style={{ color: isDark ? 'white' : 'initial' }}
     >
-       <h4>Channel: {videoInfo.channelTitle}</h4>
+      <h4>Channel: {videoInfo.channelTitle}</h4>
       <YouTube videoId={ytVideoId} opts={opts} onReady={onReady} />
       <h3>Title: {videoInfo.title}</h3>
-     
     </div>
   );
 };

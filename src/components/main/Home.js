@@ -2,11 +2,11 @@ import Searches from './home-children/Searches';
 import Landing from './home-children/Landing';
 import './Home.css';
 
-const Home = ({ searchResults, currBGColor }) => {
+const Home = ({ searchResults }) => {
   return searchResults.length === 0 ? (
-    <Landing currBGColor={currBGColor} />
+    <Landing />
   ) : (
-    <Searches searchResults={searchResults} currBGColor={currBGColor} />
+    <Searches searchResults={searchResults} />
   );
 };
 

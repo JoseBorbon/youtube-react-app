@@ -2,21 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Nav from './common/Nav';
 import Routings from './Routings';
 import Footer from './common/Footer';
+import ThemeProvider from '../contexts/theme.context';
 
 const YoutubeApp = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isColorSwitchToggled, setIsColorSwitchToggled] = useState(false);
   const [isTrue, toggleIt] = useState(false);
-  const [currBGColor, setCurrBGColor] = useState(() => {
-    const saved = localStorage.getItem('currBGColor');
-    const initialValue = JSON.parse(saved);
-    return initialValue || 'white';
-  });
-
-  useEffect(() => {
-    localStorage.setItem('currBGColor', JSON.stringify(currBGColor));
-  }, [currBGColor]);
 
   const getSearch = () => {
     if (!searchTerm) return;
@@ -50,17 +41,16 @@ const YoutubeApp = () => {
 
   return (
     <>
-      <Nav
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        getSearch={getSearch}
-        isColorSwitchToggled={isColorSwitchToggled}
-        setIsColorSwitchToggled={setIsColorSwitchToggled}
-        setCurrBGColor={setCurrBGColor}
-        isTrue = {isTrue}
-        toggleIt = {toggleIt}
-      />
-      <Routings searchResults={searchResults} currBGColor={currBGColor} />
+      <ThemeProvider>
+        <Nav
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          getSearch={getSearch}
+          isTrue={isTrue}
+          toggleIt={toggleIt}
+        />
+        <Routings searchResults={searchResults} />
+      </ThemeProvider>
       <Footer />
     </>
   );
