@@ -1,20 +1,24 @@
 import { v4 as uuid } from 'uuid';
+import { useContext } from 'react';
+import { DispatchContext } from '../../../contexts/theme.context';
+import colorHashMap from '../../../data/colors';
 import './ColorPalette.css';
 
-const ColorPalette = ({ setCurrBGColor, isTrue, toggleIt }) => {
- 
-  const handleClick = (e) => {
-    setCurrBGColor(e.target.id)
-    toggleIt(!isTrue)
-  };
-  const colors = ['RGB(24, 24, 24)', 'blue', 'green', 'orange', 'yellow', "white"];
+const ColorPalette = ({ isTrue, toggleIt }) => {
+  const dispatch = useContext(DispatchContext);
 
+  const handleClick = (e) => {
+    dispatch({ type: e.target.id });
+    toggleIt(!isTrue);
+  };
+
+  const colors = ['BLACK', 'SLATEBLUE', 'GREEN', 'ORANGE', 'YELLOW', 'WHITE'];
   const colorBoxes = colors.map((color) => (
     <li
       key={uuid()}
       className="ColorPalette-box"
       id={color}
-      style={{ backgroundColor: color }}
+      style={{ backgroundColor: colorHashMap[color] }}
       onClick={handleClick}
     ></li>
   ));
