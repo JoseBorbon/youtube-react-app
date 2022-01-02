@@ -1,0 +1,7 @@
+.contact {
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
