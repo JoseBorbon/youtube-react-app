@@ -1,0 +1,236 @@
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project-pic {
+  margin-top: 37px;
+  width: 100%;
+  grid-column: span 1;
+}
+
+.project-description {
+  margin-top: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
+  grid-column: 2/3;
+}
+.project-description h1 {
+  font-size: 7vh;
+}
+
+.project-description p {
+  margin-top: 40px;
+  text-align: left;
+  font-size: 3vh;
+}
+
+.team-description {
+  grid-column: 1;
+  margin-top: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
+  grid-row: 2;
+}
+.team-pic {
+  margin-top: 40px;
+  width: 100%;
+  grid-column: 2/3;
+  grid-row: 2;
+}
+
+.team-description h1 {
+  font-size: 7vh;
+}
+
+.team-description p {
+  margin-top: 40px;
+  text-align: left;
+  font-size: 3vh;
+}
+
+img {
+  width: 130px;
+  margin-top: 7%;
+}
+
+.team-list {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background: url('../../../media/background.png');
+  padding-bottom: 100px;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.team-list h1 {
+  margin-top: 50%;
+  font-size: 7vh;
+  grid-column: 2;
+  color: white;
+}
+
+.about-jose-profile {
+  grid-column: 1fr;
+  grid-row: 2;
+  background-color: rgb(201, 53, 53);
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 20px;
+}
+
+.about-jose-profile img {
+  border-radius: 50%;
+  border: 5px solid rgb(174, 160, 160);
+  margin-top: 30px;
+}
+
+.about-jose-bio {
+  grid-column: 1fr;
+  font-size: 1.3vh;
+  text-align: left;
+  margin-right: 10px;
+  grid-row: 3;
+}
+
+.about-ki-sub-profile {
+  grid-column: 2/3;
+  grid-row: 2;
+  background-color: #4657d2;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 20px;
+  padding-top: 20px;
+}
+
+.about-ki-sub-profile img {
+  border-radius: 50%;
+  border: 5px solid rgb(57, 63, 136);
+}
+
+.about-ki-sub-profile img:hover {
+  filter: hue-rotate(100deg);
+}
+.about-jose-profile img:hover {
+  filter: hue-rotate(100deg);
+}
+
+.about-jalamang-profile img:hover {
+  filter: hue-rotate(100deg);
+}
+
+.about-ki-sub-bio {
+  grid-column: 1fr;
+  font-size: 1.3vh;
+  text-align: left;
+  margin-left: 10px;
+  grid-row: 3;
+}
+
+.about-jalamang-profile {
+  grid-column: 1fr;
+  grid-row: 2;
+  background-color: #b4be3c;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.about-jalamang-profile p,
+.about-ki-sub-profile p,
+.about-jose-profile p {
+  font-size: 13px !important;
+  margin-top: 20px;
+}
+
+.about-jalamang-profile h4,
+.about-ki-sub-profile h4,
+.about-jose-profile h4 {
+  margin-top: 7px;
+}
+
+.about-jalamang-profile img {
+  border-radius: 50%;
+  border: 5px solid rgb(229, 237, 195);
+  margin-top: 30px;
+}
+
+.logos {
+  border: none !important;
+  width: 30px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
+}
+
+.logos-resize {
+  width: 24px;
+  margin-bottom: 43px;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  padding-right: 3px;
+  margin-right: 5px;
+}
+
+.about-jose-profile .logos,
+.about-jose-profile .logos-resize {
+  margin-top: 22px;
+}
+
+.kisub-learn-about-page {
+  color: rgb(118, 77, 77);
+  background-color: rgb(218, 195, 195);
+  padding: 30px 0;
+  border-radius: 20px;
+  margin-top: -20px;
+  margin-bottom: -100px;
+}
+
+.kisub-learn-about-page p {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(17, 17, 34);
+}
+
+.jose-learn-about-page p {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(17, 17, 34);
+}
+
+.jalamang-learn-about-page p {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(17, 17, 34);
+}
+
+.jalamang-learn-about-page {
+  color: rgb(118, 77, 77);
+  background-color: rgb(218, 195, 195);
+  padding: 35px 0;
+  border-radius: 20px;
+  margin-top: -28px;
+  margin-bottom: -20px;
+}
+
+.jose-learn-about-page {
+  color: rgb(118, 77, 77);
+  background-color: rgb(218, 195, 195);
+  padding: 30px 0;
+  border-radius: 20px;
+  margin-top: -10px;
+}
+
+.ad {
+  margin-top: 15vh;
+  font-size: xx-large;
+  color: rgb(240, 221, 221);
+  grid-column: 1/4;
+}
