@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Nav from './common/Nav';
 import Routings from './Routings';
 import Footer from './common/Footer';
