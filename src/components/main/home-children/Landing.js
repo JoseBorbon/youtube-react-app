@@ -8,7 +8,7 @@ const Landing = () => {
     <main
       style={{
         backgroundColor: color,
-        color: isDark ? 'white' : 'initial',
+        color: isDark ? 'white' : '#474552',
       }}
     >
       <p>No Searches....yet!</p>
